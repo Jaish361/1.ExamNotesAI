@@ -1,0 +1,146 @@
+
+/* === AI SmartNotes Modern Theme === */
+body {
+	min-height: 100vh;
+	font-family: 'Inter', 'Poppins', Arial, sans-serif;
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	color: rgba(255,255,255,0.95);
+	position: relative;
+	overflow-x: hidden;
+}
+
+.glass-panel {
+	background: rgba(255,255,255,0.15);
+	border-radius: 20px;
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+	backdrop-filter: blur(16px) saturate(180%);
+	-webkit-backdrop-filter: blur(16px) saturate(180%);
+	border: 1px solid rgba(255,255,255,0.18);
+	transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.glass-panel:hover {
+	box-shadow: 0 12px 40px 0 rgba(99,102,241,0.25);
+	transform: scale(1.025) translateY(-2px);
+}
+
+.main-floating {
+	animation: floaty 4s ease-in-out infinite;
+}
+@keyframes floaty {
+	0%, 100% { transform: translateY(0); }
+	50% { transform: translateY(-18px); }
+}
+
+.feature-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 2rem;
+	margin: 2rem 0;
+}
+.feature-card {
+	background: rgba(255,255,255,0.18);
+	border-radius: 18px;
+	box-shadow: 0 4px 24px 0 rgba(139,92,246,0.10);
+	padding: 2rem 1.5rem;
+	color: #fff;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	border: 1px solid rgba(255,255,255,0.13);
+}
+.feature-card:hover {
+	transform: scale(1.04) translateY(-4px);
+	box-shadow: 0 8px 32px 0 rgba(99,102,241,0.18);
+}
+
+.gradient-btn {
+	background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 100%);
+	color: #fff;
+	border: none;
+	border-radius: 999px;
+	box-shadow: 0 0 16px 2px #8b5cf6cc;
+	padding: 0.75rem 2.5rem;
+	font-weight: 600;
+	font-size: 1.1rem;
+	transition: box-shadow 0.3s, transform 0.3s;
+	outline: none;
+}
+.gradient-btn:hover {
+	box-shadow: 0 0 32px 6px #6366f1cc;
+	transform: scale(1.05);
+}
+
+.toggle-switch {
+	appearance: none;
+	width: 44px;
+	height: 24px;
+	background: #6366f1;
+	border-radius: 16px;
+	position: relative;
+	outline: none;
+	cursor: pointer;
+	transition: background 0.3s;
+}
+.toggle-switch:checked {
+	background: #8b5cf6;
+}
+.toggle-switch::before {
+	content: '';
+	position: absolute;
+	left: 4px;
+	top: 4px;
+	width: 16px;
+	height: 16px;
+	background: #fff;
+	border-radius: 50%;
+	transition: transform 0.3s;
+}
+.toggle-switch:checked::before {
+	transform: translateX(20px);
+}
+
+.modern-input {
+	background: rgba(255,255,255,0.10);
+	border: 1.5px solid rgba(255,255,255,0.18);
+	border-radius: 14px;
+	color: #fff;
+	padding: 0.7rem 1.2rem;
+	font-size: 1rem;
+	outline: none;
+	transition: border 0.3s, box-shadow 0.3s;
+}
+.modern-input:focus {
+	border: 1.5px solid #8b5cf6;
+	box-shadow: 0 0 0 2px #8b5cf655;
+}
+
+.pastel-accent {
+	background: linear-gradient(90deg, #fbc2eb 0%, #a6c1ee 100%);
+	color: #222;
+}
+
+.micro-interaction {
+	transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+}
+.micro-interaction:hover {
+	transform: scale(1.03) rotate(-1deg);
+	box-shadow: 0 6px 24px 0 #6366f1aa;
+}
+
+/* Subtle background blobs */
+.bg-blob {
+	position: absolute;
+	z-index: 0;
+	border-radius: 50%;
+	filter: blur(60px);
+	opacity: 0.35;
+	pointer-events: none;
+}
+.bg-blob1 {
+	width: 420px; height: 420px;
+	background: #6366f1;
+	top: -120px; left: -120px;
+}
+.bg-blob2 {
+	width: 320px; height: 320px;
+	background: #8b5cf6;
+	bottom: -100px; right: -100px;
+}
