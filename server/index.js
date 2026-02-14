@@ -23,7 +23,7 @@ app.post(
 );
 
 app.use(cors(
-    {origin:"http://localhost:5173",
+    {origin:"https://aismartnotesclient.onrender.com",
         credentials:true,
         methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
     }
@@ -49,4 +49,5 @@ app.use("/api/credit",creditRouter)
 app.listen(PORT,()=>{
     console.log(`✅ Server running on port ${PORT}`)
     connectDb()
+
 })
